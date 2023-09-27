@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class AMzonSeach {
@@ -14,7 +15,8 @@ public class AMzonSeach {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\anant\\2023 new\\ProjectGuruSite\\BrowserDrivers\\chrome\\chromedriver-win64\\chromedriver.exe");
 
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions option=new ChromeOptions();
+		WebDriver driver = new ChromeDriver(option);
 
 		driver.get("https://www.amazon.in/");
 
