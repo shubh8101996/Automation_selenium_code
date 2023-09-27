@@ -2,6 +2,7 @@ package baseClass;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -19,7 +20,11 @@ public class Util {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\anant\\2023 new\\ProjectGuruSite\\BrowserDrivers\\chrome\\chromedriver-win64\\chromedriver.exe");
 
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
+		
+	
 
 		driver.get("https://www.demo.guru99.com/V4/index.php");
 
